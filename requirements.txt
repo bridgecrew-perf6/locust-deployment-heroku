@@ -19,7 +19,7 @@ MarkupSafe==2.0.1
 msgpack==1.0.3
 psutil==5.9.0
 pycparser==2.21
-pypiwin32==303
+pypiwin32==223
 pyzmq==22.3.0
 requests==2.27.1
 roundrobin==0.0.2
