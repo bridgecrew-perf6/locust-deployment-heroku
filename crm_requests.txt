@@ -1,0 +1,2 @@
+GET:@/fetch_cms_tickets/?spoc=Spoc2
+GET:@/fetch_tractors/?phone=9923508234

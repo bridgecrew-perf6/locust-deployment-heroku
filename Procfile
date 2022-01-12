@@ -1,2 +1,2 @@
-web: locust -P $PORT --host=https://jsonplaceholder.typicode.com
+web: locust -P $PORT
 
