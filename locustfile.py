@@ -16,16 +16,12 @@ class QuickstartUser(HttpUser):
         for request_data in reqests_data:
             request_data = request_data.decode("utf-8").strip().split(":@")
             if request_data[0] == "GET":
-                print("get")
                 self.client.get(request_data[1])
             elif request_data[0] == "POST":
-                print("post")
                 response = self.client.post(request_data[1], json=json.loads(request_data[2]))
             elif request_data[0] == "DELETE":
-                print("delete")
                 self.client.delete(request_data[1])
             elif request_data[0] == "PUT":
-                print("put")
                 self.client.put(request_data[1], json=json.loads(request_data[2]))
             elif request_data[0] == "PATCH":
                 print("patch request to " + request_data[1])
