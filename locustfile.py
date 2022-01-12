@@ -1,7 +1,9 @@
-from locust import HttpUser, task, constant
 import datetime
 import os
 import json
+import urllib
+import requests
+from locust import HttpUser, task, constant
 # IS_AUTH_NEEDED = os.environ.get('IS_AUTH_NEEDED', 'False')
 REQUESTS_FILE_PATH = os.environ.get('REQUESTS_FILE_PATH', 'requests.txt')
 class QuickstartUser(HttpUser):
@@ -9,10 +11,10 @@ class QuickstartUser(HttpUser):
 
     @task
     def start_sending_requests(self):
-        requests_file = open(CSV_FILE_PATH, 'r')
+        requests_file = urllib.request.urlopen(REQUESTS_FILE_PATH)
         reqests_data = requests_file.readlines()
         for request_data in reqests_data:
-            request_data = request_data.strip().split(":@")
+            request_data = request_data.decode("utf-8").strip().split(":@")
             if request_data[0] == "GET":
                 print("get")
                 self.client.get(request_data[1])
