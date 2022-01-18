@@ -5,7 +5,7 @@ import urllib
 import requests
 from locust import HttpUser, task, constant
 # IS_AUTH_NEEDED = os.environ.get('IS_AUTH_NEEDED', 'False')
-REQUESTS_FILE_PATH = os.environ.get('REQUESTS_FILE_PATH', 'requests.txt')
+REQUESTS_FILE_PATH = os.environ.get('REQUESTS_FILE_PATH', 'requests_testing.txt')
 class QuickstartUser(HttpUser):
     wait_time = constant(1)
 
