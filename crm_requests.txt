@@ -1,2 +1,16 @@
-GET:@/fetch_cms_tickets/?spoc=Spoc2
-GET:@/fetch_tractors/?phone=9923508234
+GET:@/fetch_cms_tickets/?spoc=Spoc2:@{}
+GET:@/fetch_tractors/?phone=9923508234:@{}
+GET:@/get_campaigns_for_given_phone/?phone=1413914:@{}
+GET:@/get_call_list_for_campaign/?code=C01:@{}
+GET:@/fetch_crm_call_health/?phone=1234:@{}
+GET:@/get_fdw_tractors/:@{}
+GET:@/get_fdw_implement/:@{}
+GET:@/fdw_competitor_implements/:@{}
+GET:@/fdw_competitor_tractors/:@{}
+POST:@/submit_app_tickets/:@{"simha_ticket_id": "100","issue_type": "Inbound Call","device_id":"102","user_phone":"9923508234","ticket_metadata":[["How much should area be?", "12"], ["What is the Area shown in app?", "34"], ["On Which Day is the Area Wrong?", "2020-12-29"]],"additional_remarks": ""}:@{}
+POST:@/close_tickets/:@{"field_debug_required" : "NO", "ticket_id" : "53077","comments" : "no comments"}:@{}
+POST:@/force_close_callbacks/:@{"id":"45","type":"Callback Request","comments":"testing"}:@{}
+POST:@/record_call_log/:@{"id":"45","log":"logged"}:@{}
+POST:@/record_crm_call_health/:@{"phone":"1234","health":"96","call_type":"Outbound"}:@{}
+POST:@/fdw_submit/:@{"strMobileNo":"7387262571","typeOfProduct":"1"}:@{}
+POST:@/fdw_enquiry_check/:@{"strMobileNo":"7387262571","typeOfProduct":"1"}:@{}
